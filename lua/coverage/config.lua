@@ -5,8 +5,8 @@ local M = {
 local defaults = {
 	commands = true,
 	highlights = {
-		covered = { fg = "#C3E88D" },
-		uncovered = { fg = "#F07178" },
+		covered = { fg = "2" },
+		uncovered = { fg = "4" },
 		summary_border = { link = "FloatBorder" },
 		summary_normal = { link = "NormalFloat" },
 		summary_cursor_line = { link = "CursorLine" },
