@@ -3,10 +3,10 @@ local M = {}
 local config = require("coverage.config")
 
 local highlight = function(group, color)
-	local style = color.style and "gui=" .. color.style or "gui=NONE"
-	local fg = color.fg and "guifg=" .. color.fg or "guifg=NONE"
-	local bg = color.bg and "guibg=" .. color.bg or "guibg=NONE"
-	local sp = color.sp and "guisp=" .. color.sp or ""
+	local style = color.style and "cterm=" .. color.style or "cterm=NONE"
+	local fg = color.fg and "cterm=" .. color.fg or "cterm=NONE"
+	local bg = color.bg and "cterm=" .. color.bg or "cterm=NONE"
+	local sp = color.sp and "cterm=" .. color.sp or ""
 	local hl = "highlight " .. group .. " " .. style .. " " .. fg .. " " .. bg .. " " .. sp
 	vim.cmd(hl)
 	if color.link then
