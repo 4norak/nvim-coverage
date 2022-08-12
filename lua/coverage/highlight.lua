@@ -12,11 +12,10 @@ local config = require("coverage.config")
 --- @param group string name of the highlight group
 --- @param color Highlight
 local highlight = function(group, color)
-    local style = color.style and "gui=" .. color.style or "gui=NONE"
-    local fg = color.fg and "guifg=" .. color.fg or "guifg=NONE"
-    local bg = color.bg and "guibg=" .. color.bg or "guibg=NONE"
-    local sp = color.sp and "guisp=" .. color.sp or ""
-    local hl = "highlight default " .. group .. " " .. style .. " " .. fg .. " " .. bg .. " " .. sp
+    local style = color.style and "cterm=" .. color.style or "cterm=NONE"
+    local fg = color.fg and "ctermfg=" .. color.fg or "ctermfg=NONE"
+    local bg = color.bg and "ctermbg=" .. color.bg or "ctermbg=NONE"
+    local hl = "highlight default " .. group .. " " .. style .. " " .. fg .. " " .. bg
     vim.cmd(hl)
     if color.link then
         vim.cmd("highlight default link " .. group .. " " .. color.link)
