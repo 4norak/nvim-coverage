@@ -31,9 +31,9 @@ local defaults = {
     --- @field summary_pass Highlight
     --- @field summary_fail Highlight
     highlights = {
-        covered = { fg = "#B7F071" },
-        uncovered = { fg = "#F07178" },
-        partial = { fg = "#AA71F0" },
+        covered = { fg = "2" },
+        uncovered = { fg = "4" },
+        partial = { fg = "5" },
         summary_border = { link = "FloatBorder" },
         summary_normal = { link = "NormalFloat" },
         summary_cursor_line = { link = "CursorLine" },
