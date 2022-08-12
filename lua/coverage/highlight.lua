@@ -4,10 +4,9 @@ local config = require("coverage.config")
 
 local highlight = function(group, color)
 	local style = color.style and "cterm=" .. color.style or "cterm=NONE"
-	local fg = color.fg and "cterm=" .. color.fg or "cterm=NONE"
-	local bg = color.bg and "cterm=" .. color.bg or "cterm=NONE"
-	local sp = color.sp and "cterm=" .. color.sp or ""
-	local hl = "highlight " .. group .. " " .. style .. " " .. fg .. " " .. bg .. " " .. sp
+	local fg = color.fg and "ctermfg=" .. color.fg or "cterm=NONE"
+	local bg = color.bg and "ctermbg=" .. color.bg or "cterm=NONE"
+	local hl = "highlight " .. group .. " " .. style .. " " .. fg .. " " .. bg
 	vim.cmd(hl)
 	if color.link then
 		vim.cmd("highlight! link " .. group .. " " .. color.link)
